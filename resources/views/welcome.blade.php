@@ -1,4 +1,4 @@
-<!doctype html>
+{{-- <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{$name}} {{$say}}Laravel
                 </div>
 
                 <div class="links">
@@ -92,4 +92,10 @@
             </div>
         </div>
     </body>
-</html>
+</html> --}}
+@extends('layouts.app') 
+@section('content')
+<div class="container">
+    <h1>隨機題庫系統</h1>
+</div>
+@endsection
