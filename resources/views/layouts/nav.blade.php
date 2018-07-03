@@ -12,9 +12,12 @@
             <ul class="navbar-nav mr-auto">
 
             </ul>
-
+            
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                @section('my_menu')
+                    <li><a class="nav-link" href="/home">Home</a></li>
+                @show
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
