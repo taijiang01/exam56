@@ -22,7 +22,7 @@
 </div>
 @endsection
 
-@section('my_menu') 
+{{-- @section('my_menu') 
     @parent
     <li><a class="nav-link" href="/home">我的選項</a></li>
-@stop
+@stop --}}
