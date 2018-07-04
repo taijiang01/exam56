@@ -37,6 +37,10 @@ class ExamController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|min:2|max:191',
+        ], [
+            'required' => '「:attribute」為必填欄位',
+            'min'      => '「:attribute」至少要 :min 個字',
+            'max'      => '「:attribute」最多只能 :max 個字',
         ]);
         //dd($request->all());
         Exam::create($request->all());
