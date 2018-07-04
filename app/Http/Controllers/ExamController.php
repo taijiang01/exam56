@@ -36,7 +36,7 @@ class ExamController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|min:2|max:255',
+            'title' => 'required|min:2|max:191',
         ]);
         //dd($request->all());
         Exam::create($request->all());
