@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/exam/create', function () {
-    return view('exam.create');
-})->name('exam.create');
+Route::get('/exam', 'ExamController@index')->name('exam.index');
+Route::get('/exam/create', 'ExamController@create')->name('exam.create');
+
+Route::post('/exam', 'ExamController@store')->name('exam.store');

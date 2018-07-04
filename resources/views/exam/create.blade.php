@@ -16,7 +16,7 @@
                 ->control(bs()->radioGroup('enable', [1 => '啟用', 0 => '關閉'])->selectedOption(1)->inline())
                 ->showAsRow()
                 }}
-
+            {{ bs()->hidden('user_id', Auth::id()) }}
             {{ bs()->submit('儲存') }}
         {{ bs()->closeForm() }}
     @else
