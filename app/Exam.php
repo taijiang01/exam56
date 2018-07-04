@@ -9,4 +9,5 @@ class Exam extends Model
     protected $fillable = [
         'title', 'user_id', 'enable',
     ];
+    protected $dates = ['birthday'];
 }
