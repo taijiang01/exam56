@@ -13,4 +13,8 @@
             <li class="list-group-item">尚無任何測驗</li>
         @endforelse
     </ul>
+
+    <div class="my-3">
+        {{ $exams->links() }}
+    </div>
 @endsection
