@@ -41,6 +41,7 @@ class ExamController extends Controller
             'user_id' => $request->user_id,
             'enable'  => $request->enable,
         ]);
+        return redirect()->route('exam.index');
     }
 
     /**
