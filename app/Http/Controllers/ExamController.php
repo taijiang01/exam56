@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Exam;
 use App\Http\Requests\ExamRequest;
-use App\Topic;
 use Illuminate\Http\Request;
 
 class ExamController extends Controller
@@ -62,9 +61,9 @@ class ExamController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Exam $exam)
     {
-        //
+        return view('exam.create', compact('exam'));
     }
 
     /**
