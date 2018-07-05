@@ -53,8 +53,7 @@ class ExamController extends Controller
      */
     public function show(Exam $exam)
     {
-        $topics = Topic::all();
-        return view('exam.show', compact('exam', 'topics'));
+        return view('exam.show', ['exam' => $exam]);
     }
 
     /**

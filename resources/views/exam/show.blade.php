@@ -38,9 +38,9 @@
     <div class="text-center">
         發佈於 {{$exam->created_at->format("Y年m月d日 H:i:s")}} / 最後更新： {{$exam->updated_at->format("Y年m月d日 H:i:s")}}
     </div>
-    
+@if(Auth::id())
     <dl>
-        @forelse ($topics as $key => $topic)
+        @forelse ($exam->topics as $key => $topic)
             <dt>
                 <h3>
                 @can('建立測驗')
@@ -62,5 +62,5 @@
             <div class="alert alert-danger">尚無任何題目</div>
         @endforelse
     </dl>
-    
+@endif
 @endsection
