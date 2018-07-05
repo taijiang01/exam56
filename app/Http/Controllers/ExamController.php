@@ -25,8 +25,7 @@ class ExamController extends Controller
                 ->orderBy('created_at', 'desc')
                 ->paginate(2);
         }
-
-        return view('exam.index', compact('exams'));
+        return view('exam.index', ['exams' => $exams]);
     }
 
     /**
@@ -59,7 +58,7 @@ class ExamController extends Controller
      */
     public function show(Exam $exam)
     {
-        return view('exam.show', ['exam' => $exam]);
+        return view('exam.show', compact('exam'));
     }
 
     /**
@@ -95,6 +94,5 @@ class ExamController extends Controller
     public function destroy(Exam $exam)
     {
         $exam->delete();
-        return redirect()->route('exam.index');
     }
 }
