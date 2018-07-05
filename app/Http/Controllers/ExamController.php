@@ -73,9 +73,10 @@ class ExamController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ExamRequest $request, Exam $exam)
     {
-        //
+        $exam->update($request->all());
+        return redirect()->route('exam.show', $exam->id);
     }
 
     /**
